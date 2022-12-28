@@ -1,0 +1,259 @@
+--Build a boat for treasure
+
+--setup
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "Build A Boat For Treasure", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+
+--tp! 1 2 3 4 5 6 7 8 9 10 11 12 13
+
+--claim: workspace.ClaimRiverResultsGold:FireServer()
+
+--variable
+_G.BestAutoFarm = true
+_G.dodgefirstzone = true
+_G.EndChest = true
+_G.GoldBlock = true
+
+EndChestSpeed = nil
+
+
+
+
+
+
+--function
+function GoldBlock()
+    while _G.GoldBlock == true do 
+       local tp_table = {
+            tp13 = Vector3.new(-59.85313415527344, 100, 2236.435302734375),
+        }
+        
+        local tween_s = game:GetService('TweenService')
+        local tweeninfo = TweenInfo.new(5,Enum.EasingStyle.Linear)
+        
+        local lp = game.Players.LocalPlayer
+        
+        function tween_tp(v)
+            if lp.Character and 
+            lp.Character:FindFirstChild('HumanoidRootPart') then
+                local cf = CFrame.new(v)
+                local a = tween_s:Create(lp.Character.HumanoidRootPart,tweeninfo,{CFrame=cf})
+                a:Play()
+                 a.Completed:Wait()
+            end
+        end
+        while _G.GoldBlock == true do
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-59.694156646728516, 100.52972412109375, 1318.0565185546875)
+            tween_tp(tp_table.tp13)
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-55.986976623535156, -362.9062805175781, 9495.1044921875)
+            wait(0.5)
+            game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
+            wait(14.5)
+            game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
+            wait(1)
+            workspace.ClaimRiverResultsGold:FireServer()
+        end
+end
+end
+
+function EndChest()
+    while _G.EndChest == true do 
+       local tp_table = {
+            tp13 = Vector3.new(-54.56056594848633, 100, 8666.755859375),
+        }
+        
+        local tween_s = game:GetService('TweenService')
+        local tweeninfo = TweenInfo.new(EndChestSpeed,Enum.EasingStyle.Linear)
+        
+        local lp = game.Players.LocalPlayer
+        
+        function tween_tp(v)
+            if lp.Character and 
+            lp.Character:FindFirstChild('HumanoidRootPart') then
+                local cf = CFrame.new(v)
+                local a = tween_s:Create(lp.Character.HumanoidRootPart,tweeninfo,{CFrame=cf})
+                a:Play()
+                 a.Completed:Wait()
+            end
+        end
+        
+        while _G.EndChest == true do
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-54.56056594848633, 100, 1177.943603515625)
+            tween_tp(tp_table.tp13)
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-55.986976623535156, -362.9062805175781, 9495.1044921875)
+            wait(0.5)
+            game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
+            wait(14.5)
+            game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
+            wait(1)
+            workspace.ClaimRiverResultsGold:FireServer()
+        end
+end
+end
+
+function BestAutofarm()
+    while _G.BestAutoFarm == true do 
+       local tp_table = {
+            tp1 = Vector3.new(-50.694156646728516, 106.52972412109375, 1364.5596923828125),
+            tp2 = Vector3.new(-59.2010383605957, 106.92115020751953, 2139.06396484375),
+            tp3 = Vector3.new(-75.1091537475586, 106.37812042236328, 2911.113037109375),
+            tp4 = Vector3.new(-89.19610595703125, 106.34156799316406, 3684.21435546875),
+            tp5 = Vector3.new(-90.96783447265625, 106.9766616821289, 4445.6611328125),
+            tp6 = Vector3.new(-58.47862243652344, 106.51799011230469, 5219.90283203125),
+            tp7 = Vector3.new(-92.00211334228516, 106.44149017333984, 5994.02001953125),
+            tp8 = Vector3.new(-91.26881408691406, 106.76213073730469, 6758.92333984375),
+            tp9 = Vector3.new(-64.38371276855469, 106.70301055908203, 7533.8193359375),
+            tp10 = Vector3.new(-76.22942352294922, 106.62004089355469, 8300.7177734375),
+            tp11 = Vector3.new(-55.986976623535156, -362.9062805175781, 9489.1044921875), 
+        }
+        
+        local tween_s = game:GetService('TweenService')
+        local tweeninfo = TweenInfo.new(3.5,Enum.EasingStyle.Linear)
+        
+        local lp = game.Players.LocalPlayer
+        
+        function tween_tp(v)
+            if lp.Character and 
+            lp.Character:FindFirstChild('HumanoidRootPart') then
+                local cf = CFrame.new(v)
+                local a = tween_s:Create(lp.Character.HumanoidRootPart,tweeninfo,{CFrame=cf})
+                a:Play()
+                 a.Completed:Wait()
+            end
+        end
+        
+    while _G.BestAutoFarm == true  do
+        
+      if _G.BestAutoFarm == true then
+
+        if _G.dodgefirstzone == false then
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-50.694156646728516, 100.52972412109375, 1364.5596923828125)
+        tween_tp(tp_table.tp1)
+         workspace.ClaimRiverResultsGold:FireServer()
+        end
+
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-59.2010383605957, 100.92115020751953, 2139.06396484375)
+        tween_tp(tp_table.tp2)
+         workspace.ClaimRiverResultsGold:FireServer()
+         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-75.1091537475586, 100.37812042236328, 2911.113037109375)
+        tween_tp(tp_table.tp3)
+         workspace.ClaimRiverResultsGold:FireServer()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-89.19610595703125, 100.34156799316406, 3684.21435546875)
+        tween_tp(tp_table.tp4)
+         workspace.ClaimRiverResultsGold:FireServer()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-90.96783447265625, 100.9766616821289, 4445.6611328125)
+        tween_tp(tp_table.tp5)
+         workspace.ClaimRiverResultsGold:FireServer()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-58.47862243652344, 100.51799011230469, 5219.90283203125)
+        tween_tp(tp_table.tp6)
+         workspace.ClaimRiverResultsGold:FireServer()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-92.00211334228516, 100.44149017333984, 5994.02001953125)
+        tween_tp(tp_table.tp7)
+         workspace.ClaimRiverResultsGold:FireServer()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-91.26881408691406, 100.76213073730469, 6758.92333984375)
+        tween_tp(tp_table.tp8)
+         workspace.ClaimRiverResultsGold:FireServer()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-64.38371276855469, 100.70301055908203, 7533.8193359375)
+        tween_tp(tp_table.tp9)
+         workspace.ClaimRiverResultsGold:FireServer()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-76.22942352294922, 100.62004089355469, 8300.7177734375)
+        tween_tp(tp_table.tp10)
+         workspace.ClaimRiverResultsGold:FireServer()
+      end
+    
+            game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
+            game.Players.LocalPlayer.Character.Humanoid.Health = 0
+            wait(7)
+
+        break
+end
+end
+end
+
+--tab
+local Farm = Window:MakeTab({
+	Name = "AutoFarm",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+--Farm
+local Farm = Farm:AddSection({
+	Name = "AutoFarm"
+})
+
+Farm:AddToggle({
+	Name = "AutoFarm | Gold",
+	Default = false,
+	Callback = function(Value)
+        _G.BestAutoFarm = Value
+        BestAutofarm()
+	end    
+})
+
+Farm:AddToggle({
+	Name = "Dodge First Zone",
+	Default = false,
+	Callback = function(Value)
+        _G.dodgefirstzone = Value
+	end    
+})
+
+Farm:AddParagraph("About AutoFarm Gold","The buttons above allow you to autofarm the gold, the button to dodge the first zone was created because the first zone yields less than the others")
+
+Farm:AddToggle({
+	Name = "AutoFarm | GoldBlock ",
+	Default = false,
+	Callback = function(Value)
+        _G.GoldBlock = Value
+        GoldBlock()
+	end    
+})
+
+Farm:AddParagraph("About AutoFarm GoldBlock","This button above allows you to collect gold blocks")
+
+Farm:AddToggle({
+	Name = "AutoFarm | GoldBlock + Gold",
+	Default = false,
+	Callback = function(Value)
+        _G.EndChest = Value
+        EndChest()
+	end    
+})
+
+Farm:AddSlider({
+	Name = "Speed of the AutoFarm",
+	Min = 1,
+	Max = 40,
+	Default = 20,
+	Color = Color3.fromRGB(255,255,255),
+	Increment = 1,
+	ValueName = "power",
+	Callback = function(Value)
+		EndChestSpeed = Value
+	end    
+})
+
+Farm:AddParagraph("About AutoFarm Gold and block","This button is used to farm gold and gold blocks, speed 20 is recommended. Uncheck and check to refresh the speed")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+OrionLib:Init()
+
+task.wait(1)
